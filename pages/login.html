@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Parceiros - Login</title>
+    <!-- Inclui o Bootstrap para facilitar o layout responsivo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Vincula o arquivo CSS externo -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container-fluid login-container">
+        <div class="row align-items-center justify-content-center" style="height: 100vh;">
+            <!-- Logo e Texto à esquerda para Desktop e Paisagem -->
+            <div class="col-12 col-md-5 d-flex flex-column align-items-center">
+                <div class="logo-container text-center">
+                    <!-- Imagem da logo -->
+                    <img src="/images/Design sem nome (19).png" alt="Logo iFood+Partner" class="logo-img">
+                    <!-- Texto abaixo da logo -->
+                    <p>Seu negócio pede gestão financeira?<br>Seu negócio pede <strong>iFood+Partner</strong></p>
+                </div>
+            </div>
+
+            <!-- Formulário de Login à direita para Desktop e Paisagem -->
+            <div class="col-12 col-md-5 right-side">
+                <h2 class="login-header text-center">Portal de Parceiros</h2>
+                <p class="text-center">Gerenciamento Completo das suas operações</p>
+                <form>
+                    <!-- Campo de e-mail -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <!-- Campo de senha -->
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" required>
+                    </div>
+                    <!-- Botão de login -->
+                    <button type="submit" class="btn btn-login w-100">Entrar</button>
+                    <!-- Links para recuperação de senha e ajuda -->
+                    <div class="mt-3 text-center">
+                        <a href="#">Esqueci minha senha</a><br>
+                        <a href="#">Preciso de ajuda para acessar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Configurações gerais de layout */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+/* Configuração da largura do container para centralizar o conteúdo */
+.container-fluid {
+    max-width: 1200px; /* Define uma largura máxima */
+    padding: 0 15px; /* Padding nas laterais para espaçamento */
+}
+
+/* Configurações da logo e texto na parte esquerda */
+.logo-container {
+    text-align: center;
+}
+
+.logo-img {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Configuração da parte direita com o formulário */
+.right-side {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tamanho do título e espaçamento */
+.login-header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Configuração do botão de login */
+.btn-login {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+/* Ajuste para telas mobile (menores que 767px) */
+@media (max-width: 767px) {
+    .container-fluid {
+        padding: 30px;
+        max-width: 100%; /* Garante que os elementos ocupem a largura total no mobile */
+    }
+
+    .logo-img {
+        max-width: 80px; /* Reduz o tamanho da logo no mobile */
+    }
+
+    .right-side {
+        padding: 15px;
+    }
+}

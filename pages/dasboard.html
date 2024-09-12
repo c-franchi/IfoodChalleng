@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Cabeçalho</title>
+    <!-- Incluindo o CDN do Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <!-- Incluindo Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="/images/Design sem nome (19).png" alt="Logo FoodPartner" class="h-10">
+            <nav class="flex space-x-6">
+                <a href="#" class="text-gray-700">Dashboard</a>
+                <div class="relative">
+                    <a href="#" class="text-gray-700">Gerência</a>
+                    <span class="ml-1 text-gray-500">&#9660;</span> <!-- Ícone seta para baixo -->
+                </div>
+            </nav>
+        </div>
+        <h1 class="text-2xl text-red-400    ">Portal de Parceiros</h1>
+        <div class="flex items-center space-x-4">
+            
+            <!-- Ícone de perfil do usuário com Font Awesome -->
+            <i class="fas fa-user-circle text-gray-700 text-3xl"></i>
+            <span class="text-gray-700">Ricardo Parreira Nimai</span>
+        </div>
+    </header>
+    <!-- Barra de navegação secundária -->
+    <div class="bg-gray-100 py-2 px-6 flex justify-between items-center">
+        <div class="text-gray-600">Restaurante Nei Centro Sul</div>
+        <div class="text-gray-600">Período: 05/05/2024 a 30/05/2024</div>
+        <div class="flex items-center">
+            <input type="text" placeholder="Pesquisar" class="border rounded p-2 mr-4">
+            <!-- Ícone de pesquisa com Font Awesome -->
+            <i class="fas fa-search text-gray-500"></i>
+        </div>
+    </div>
+   <!-- Métricas Principais - 6 colunas sempre em uma linha -->
+<div class="grid grid-cols-6 gap-2 p-3">
+    <div class="card card-vendas">
+        <h2>Vendas Faturadas</h2>
+        <p class="text-2xl font-bold">R$ 45.495,96</p>
+    </div>
+    <div class="card card-despesas">
+        <h2>Despesas</h2>
+        <p class="text-2xl font-bold">R$ 15.295,16</p>
+    </div>
+    <div class="card card-saldo">
+        <h2>Saldo</h2>
+        <p class="text-2xl font-bold">R$ 30.200,80</p>
+    </div>
+    <div class="card card-ticket">
+        <h2>Ticket Médio</h2>
+        <p class="text-2xl font-bold">R$ 11,80</p>
+    </div>
+    <div class="card card-clientes">
+        <h2>Número de Clientes</h2>
+        <p class="text-2xl font-bold">1.052</p>
+    </div>
+    <div class="card card-itens">
+        <h2>Itens Vendidos</h2>
+        <p class="text-2xl font-bold">196</p>
+    </div>
+</div>
+
+<!-- Parte Central com Gráficos e Tabelas - Coluna do meio mais larga -->
+<div class="grid grid-cols-3 lg:grid-cols-3 gap-4 p-4">
+    <!-- Seção "Resultado" (Esquerda Superior) -->
+    <div class="bg-white p-4 rounded-lg shadow col-span-1">
+        <h3 class="text-lg font-bold mb-4">Resultado</h3>
+        <p><strong>Período:</strong> 05/05/2024 a 30/05/2024</p>
+        <p><strong>Receita:</strong> R$ 45.495,96</p>
+        <p class="text-red-500"><strong>Despesa:</strong> R$ 15.295,16</p>
+        <hr class="my-2">
+        <ul>
+            <li>+ A Receber: R$ 8.150,61</li>
+            <li>- A Pagar: R$ 5.202,16</li>
+            <li>= A Pagar - A Receber: R$ 2.948,45</li>
+            <li>+ Recebidos - Pagos: R$ 27.252,40</li>
+            <li><strong>Saldo:</strong> R$ 30.200,80</li>
+            <li><strong>Investimento:</strong> R$ 1.900,00</li>
+            <li><strong class="font-bold">Saldo Final:</strong> R$ 32.100,80</li>
+        </ul>
+    </div>
+
+    <!-- Gráfico Receita x Despesa (Centro Superior) -->
+    <div class="bg-white p-4 rounded-lg shadow lg:col-span-2">
+        <h3 class="text-center text-lg font-bold mb-4">Receita x Despesa</h3>
+        <canvas id="receitaDespesaChart"></canvas>
+    </div>
+
+    <!-- Ranking de Vendas (Direita Superior) -->
+    <div class="bg-white p-4 rounded-lg shadow col-span-1">
+        <h3 class="text-center text-lg font-bold mb-4">Ranking de Vendas</h3>
+        <table class="w-full text-left">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Qtde</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Coxinha de Frango</td><td>50</td><td>R$ 95,50</td></tr>
+                <tr><td>Empada de Frango</td><td>45</td><td>R$ 87,50</td></tr>
+                <tr><td>Açaí 500ml</td><td>33</td><td>R$ 66,50</td></tr>
+                <tr><td>Bolinha Napolitana</td><td>16</td><td>R$ 32,50</td></tr>
+                <tr><td>Pão de Queijo Recheado</td><td>15</td><td>R$ 22,80</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Gráfico Formas de Recebimento (Esquerda Inferior) -->
+    <div class="bg-white p-4 rounded-lg shadow col-span-1">
+        <h3 class="text-center text-lg font-bold mb-4">Formas de Recebimento</h3>
+        <canvas id="formasRecebimentoChart"></canvas>
+    </div>
+
+    <!-- Gráfico Faturamento Acumulado (Centro Inferior, mais largo) -->
+    <div class="bg-white p-4 rounded-lg shadow lg:col-span-2">
+        <h3 class="text-center text-lg font-bold mb-4">Faturamento Acumulado (R$)</h3>
+        <canvas id="faturamentoAcumuladoChart"></canvas>
+    </div>
+
+    <!-- Gráfico Formas de Pagamento (Direita Inferior) -->
+    <div class="bg-white p-4 rounded-lg shadow col-span-1">
+        <h3 class="text-center text-lg font-bold mb-4">Formas de Pagamento</h3>
+        <canvas id="formasPagamentoChart"></canvas>
+    </div>
+</div>
+</div>
+
+<!-- Rodapé com Saldos de Recebimento por Tipo -->
+<div class="grid grid-cols-4 gap-4 p-4">
+    <div class="card-footer card-dinheiro">
+        <h2>Dinheiro</h2>
+        <p class="text-2xl font-bold">R$ 11.366,89</p>
+        <i class="fas fa-dollar-sign text-4xl"></i>
+    </div>
+    <div class="card-footer card-debito">
+        <h2>Cartão - Débito</h2>
+        <p class="text-2xl font-bold">R$ 9.492,03</p>
+        <i class="fas fa-credit-card text-4xl"></i>
+    </div>
+    <div class="card-footer card-credito">
+        <h2>Cartão - Crédito</h2>
+        <p class="text-2xl font-bold">R$ 18.018,74</p>
+        <i class="fas fa-credit-card text-4xl"></i>
+    </div>
+    <div class="card-footer card-outros">
+        <h2>Outros</h2>
+        <p class="text-2xl font-bold">R$ 6.618,30</p>
+        <i class="fas fa-coins text-4xl"></i>
+    </div>
+</div>
+
+
+    <!-- Script para os gráficos -->
+    <script src="/js/dashboard-scripts.js"></script>
+</body>
+</html>
