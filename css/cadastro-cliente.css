@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.125rem; /* Ajuste para diminuir o tamanho da fonte */
+    margin-bottom: 8px; /* Reduzindo o espaço inferior */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 6px; /* Reduzindo o padding */
+    font-size: 0.875rem; /* Diminuindo o tamanho da fonte */
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 8px; /* Reduzindo o espaço inferior entre os campos */
+}
+
+button {
+    background-color: #e3342f;
+    color: #fff;
+    padding: 8px 12px; /* Reduzindo o padding */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 0.875rem; /* Diminuindo o tamanho da fonte */
+}
+
+button:hover {
+    background-color: #cc1f1a;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.25rem; /* Menor tamanho de fonte para o cabeçalho */
+    }
+
+    h2 {
+        font-size: 1rem; /* Menor tamanho de fonte para o título */
+    }
+
+    .container {
+        margin-top: 5px; /* Reduzindo a margem superior */
+        padding: 0 10px; /* Adicionando padding para telas menores */
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Layout de uma coluna para mobile */
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas ao invés de quatro */
+    }
+
+    input, textarea {
+        font-size: 0.75rem; /* Diminuindo ainda mais o tamanho da fonte */
+    }
+
+    .mt-4, .mt-6 {
+        margin-top: 4px; /* Reduzindo o espaçamento vertical */
+    }
+
+    button {
+        width: 100%; /* Botão de largura completa */
+        font-size: 0.875rem; /* Assegurando menor tamanho de fonte */
+    }
+
+    .flex {
+        flex-direction: column; /* Itens empilhados no cabeçalho */
+    }
+
+    .text-gray-700 {
+        text-align: center; /* Texto centralizado para mobile */
+    }
+}
+
+/* Certifique-se de que os elementos caibam na tela */
+form {
+    max-width: 100%; /* Evitando overflow */
+    margin: 0 auto; /* Centralizando o formulário */
+}
+
+header, .container {
+    padding: 8px; /* Reduzindo o padding geral */
+}

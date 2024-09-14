@@ -7,7 +7,7 @@
     <!-- Inclui o Bootstrap para facilitar o layout responsivo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Vincula o arquivo CSS externo -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/IfoodChalleng/css/style.css">
 </head>
 <body>
     <div class="container-fluid login-container">
@@ -16,7 +16,7 @@
             <div class="col-12 col-md-5 d-flex flex-column align-items-center">
                 <div class="logo-container text-center">
                     <!-- Imagem da logo -->
-                    <img src="/images/Design sem nome (19).png" alt="Logo iFood+Partner" class="logo-img">
+                    <img src="/IfoodChalleng/images/_iFood logo.png" alt="Logo iFood+Partner" class="logo-img">
                     <!-- Texto abaixo da logo -->
                     <p>Seu negócio pede gestão financeira?<br>Seu negócio pede <strong>iFood+Partner</strong></p>
                 </div>
@@ -26,7 +26,7 @@
             <div class="col-12 col-md-5 right-side">
                 <h2 class="login-header text-center">Portal de Parceiros</h2>
                 <p class="text-center">Gerenciamento Completo das suas operações</p>
-                <form>
+                <form id="loginForm">
                     <!-- Campo de e-mail -->
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
@@ -51,5 +51,24 @@
 
     <!-- Scripts do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script para tratar o login -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão do formulário
+
+            // Validação simples dos campos (pode ser expandida conforme necessário)
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Simulação de verificação do login (em um projeto real, você faria uma requisição ao servidor)
+            if (email === 'teste@ifood.com' && senha === '123456') {
+                // Redireciona para a página de dashboard
+                window.location.href = 'dashboard.html';
+            } else {
+                // Exibe uma mensagem de erro (aqui pode ser customizado)
+                alert('E-mail ou senha incorretos');
+            }
+        });
+    </script>
 </body>
 </html>

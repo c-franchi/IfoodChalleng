@@ -7,7 +7,7 @@
     <!-- Incluindo o CDN do Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/IfoodChalleng/css/dashboard.css">
     <!-- Incluindo Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -15,7 +15,7 @@
     <!-- Cabeçalho -->
     <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
         <div class="flex items-center space-x-4">
-            <img src="/images/Design sem nome (19).png" alt="Logo FoodPartner" class="h-10">
+            <img src="/IfoodChalleng/images/_iFood logo.png" alt="Logo FoodPartner" class="h-10">
             <nav class="flex space-x-6">
                 <a href="#" class="text-gray-700">Dashboard</a>
                 <div class="relative">
@@ -45,28 +45,28 @@
    <!-- Métricas Principais - 6 colunas sempre em uma linha -->
 <div class="grid grid-cols-6 gap-2 p-3">
     <div class="card card-vendas">
-        <h2>Vendas Faturadas</h2>
-        <p class="text-2xl font-bold">R$ 45.495,96</p>
+        <h>Vendas Faturadas</h>
+        <p class="text-1xl font-bold">R$ 45.495,96</p>
     </div>
     <div class="card card-despesas">
-        <h2>Despesas</h2>
-        <p class="text-2xl font-bold">R$ 15.295,16</p>
+        <h>Despesas</h>
+        <p class="text-1xl font-bold">R$ 15.295,16</p>
     </div>
     <div class="card card-saldo">
-        <h2>Saldo</h2>
-        <p class="text-2xl font-bold">R$ 30.200,80</p>
+        <h>Saldo</h>
+        <p class="text-1xl font-bold">R$ 30.200,80</p>
     </div>
     <div class="card card-ticket">
-        <h2>Ticket Médio</h2>
-        <p class="text-2xl font-bold">R$ 11,80</p>
+        <h>Ticket Médio</h>
+        <p class="text-1xl font-bold">R$ 11,80</p>
     </div>
     <div class="card card-clientes">
-        <h2>Número de Clientes</h2>
-        <p class="text-2xl font-bold">1.052</p>
+        <h>Número de Clientes</h>
+        <p class="text-1xl font-bold">1.052</p>
     </div>
     <div class="card card-itens">
-        <h2>Itens Vendidos</h2>
-        <p class="text-2xl font-bold">196</p>
+        <h>Itens Vendidos</h>
+        <p class="text-1xl font-bold">196</p>
     </div>
 </div>
 
@@ -98,7 +98,7 @@
 
     <!-- Ranking de Vendas (Direita Superior) -->
     <div class="bg-white p-4 rounded-lg shadow col-span-1">
-        <h3 class="text-center text-lg font-bold mb-4">Ranking de Vendas</h3>
+        <h class="text-center text-lg font-bold mb-4">Ranking de Vendas</h>
         <table class="w-full text-left">
             <thead>
                 <tr>
@@ -125,44 +125,43 @@
 
     <!-- Gráfico Faturamento Acumulado (Centro Inferior, mais largo) -->
     <div class="bg-white p-4 rounded-lg shadow lg:col-span-2">
-        <h3 class="text-center text-lg font-bold mb-4">Faturamento Acumulado (R$)</h3>
+        <h class="text-center text-lg font-bold mb-4">Faturamento Acumulado (R$)</h>
         <canvas id="faturamentoAcumuladoChart"></canvas>
     </div>
 
     <!-- Gráfico Formas de Pagamento (Direita Inferior) -->
     <div class="bg-white p-4 rounded-lg shadow col-span-1">
-        <h3 class="text-center text-lg font-bold mb-4">Formas de Pagamento</h3>
+        <h class="text-center text-lg font-bold mb-4">Formas de Pagamento</h>
         <canvas id="formasPagamentoChart"></canvas>
     </div>
 </div>
 </div>
 
 <!-- Rodapé com Saldos de Recebimento por Tipo -->
-<div class="grid grid-cols-4 gap-4 p-4">
+<div class="grid grid-cols-4 gap-4 p-5">
     <div class="card-footer card-dinheiro">
-        <h2>Dinheiro</h2>
-        <p class="text-2xl font-bold">R$ 11.366,89</p>
-        <i class="fas fa-dollar-sign text-4xl"></i>
-    </div>
+        <h>Dinheiro</h>
+        <p class="text-1xl font-bold">R$ 11.366,89 <i class="fas fa-dollar-sign text-2xl"></i></p>
+        </div>
     <div class="card-footer card-debito">
-        <h2>Cartão - Débito</h2>
-        <p class="text-2xl font-bold">R$ 9.492,03</p>
-        <i class="fas fa-credit-card text-4xl"></i>
-    </div>
-    <div class="card-footer card-credito">
-        <h2>Cartão - Crédito</h2>
-        <p class="text-2xl font-bold">R$ 18.018,74</p>
-        <i class="fas fa-credit-card text-4xl"></i>
-    </div>
+        <h>Cartão - Débito</h>
+        <p class="text-1xl font-bold">R$ 9.492,03 <i class="fas fa-credit-card text-2xl"></i></p>
+        <!-- <i class="fas fa-credit-card text-4xl"></i> -->
+        </div>
+        <div class="card-footer card-credito">
+            <h>Cartão - Crédito</h>
+            <p class="text-1xl font-bold">R$ 18.018,74
+            <i class="fas fa-credit-card text-2xl"></i></p>
+        </div>
     <div class="card-footer card-outros">
-        <h2>Outros</h2>
-        <p class="text-2xl font-bold">R$ 6.618,30</p>
-        <i class="fas fa-coins text-4xl"></i>
+        <h>Outros</h>
+        <p class="text-1xl font-bold">R$ 6.618,30
+        <i class="fas fa-coins text-2xl"></i></p>
     </div>
 </div>
 
 
     <!-- Script para os gráficos -->
-    <script src="/js/dashboard-scripts.js"></script>
+    <script src="/IfoodChalleng/js/dashboard-scripts.js"></script>
 </body>
 </html>

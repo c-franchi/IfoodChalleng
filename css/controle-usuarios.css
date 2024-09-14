@@ -1,0 +1,73 @@
+/* Estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    border-collapse: collapse;
+    background-color: #e3342f; /* Red color for header */
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+/* Add border-radius to the top-left and top-right corners */
+table th:first-child {
+    border-top-left-radius: 0.5rem; /* Adjust the radius as needed */
+}
+
+table th:last-child {
+    border-top-right-radius: 0.5rem; /* Adjust the radius as needed */
+}
+
+table tr {
+    background-color: white;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+table td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para o botão "Novo Usuário" */
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c53030;
+}
+
+/* Estilos para ícones de ação */
+.fa-edit {
+    transition: color 0.3s ease;
+}
+
+.fa-edit:hover {
+    color: #2b6cb0;
+}
+
+/* Reduzindo a fonte para caber mais linhas sem scroll */
+table th, table td {
+    border-collapse: collapse;
+    font-size: 0.875rem; /* Adjust the font size */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    table th, table td {
+        font-size: 0.75rem;
+    }
+}

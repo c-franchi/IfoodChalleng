@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuários</title>
+    <!-- Incluindo o CDN do Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/IfoodChalleng/css/controle-usuarios.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="/IfoodChalleng/images/_iFood logo.png" alt="Logo FoodPartner" class="h-10">
+            <nav class="flex space-x-6">
+                <a href="#" class="text-gray-700">Dashboard</a>
+                <div class="relative">
+                    <a href="#" class="text-gray-700">Gerência</a>
+                    <span class="ml-1 text-gray-500">&#9660;</span> <!-- Ícone seta para baixo -->
+                </div>
+            </nav>
+        </div>
+        <h1 class="text-2xl text-red-400">Portal de Parceiros</h1>
+        <div class="flex items-center space-x-4">
+            <!-- Ícone de perfil do usuário com Font Awesome -->
+            <i class="fas fa-user-circle text-gray-700 text-3xl"></i>
+            <span class="text-gray-700">Ricardo Parreira Nimai</span>
+        </div>
+    </header>
+    <!-- Barra de navegação secundária -->
+    <div class="bg-gray-100 py-2 px-6">
+        <nav class="text-gray-600">
+            Home > Gerência > Controle de Acesso > Usuário
+        </nav>
+    </div>
+    
+    <!-- Conteúdo principal -->
+    <div class="container mx-auto mt-4 px-4">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold text-gray-700">Controle de Usuários</h2>
+            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Novo Usuário</button>
+        </div>
+
+        <!-- Filtro -->
+        <div class="mb-4">
+            <label for="estabelecimento" class="block text-sm font-medium text-gray-700">Usuário</label>
+            <select id="estabelecimento" class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option>Todos</option>
+                <!-- Adicione outras opções conforme necessário -->
+            </select>
+        </div>
+        <!-- Tabela de Usuários -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr class="bg-red-500 text-white">
+                        <th class="py-2 px-4 text-left text-sm">Código</th>
+                        <th class="py-2 px-4 text-left text-sm">Usuário</th>
+                        <th class="py-2 px-4 text-left text-sm">Nome Completo</th>
+                        <th class="py-2 px-4 text-left text-sm">CPF</th>
+                        <th class="py-2 px-4 text-left text-sm">Perfil</th>
+                        <th class="py-2 px-4 text-left text-sm">Ativo</th>
+                        <th class="py-2 px-4 text-left text-sm">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border px-2 py-1 text-sm">1</td>
+                        <td class="border px-2 py-1 text-sm">CASSIO.COSTA</td>
+                        <td class="border px-2 py-1 text-sm">CASSIO LEITE COSTA</td>
+                        <td class="border px-2 py-1 text-sm">000.000.000-00</td>
+                        <td class="border px-2 py-1 text-sm">OPERADOR</td>
+                        <td class="border px-2 py-1 text-sm">SIM</td>
+                        <td class="border px-2 py-1 text-center">
+                            <i class="fas fa-edit text-blue-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border px-2 py-1 text-sm">2</td>
+                        <td class="border px-2 py-1 text-sm">CLAUDINEI.FRANCHI</td>
+                        <td class="border px-2 py-1 text-sm">CLAUDINEI LUIZ FRANCHI</td>
+                        <td class="border px-2 py-1 text-sm">000.000.000-00</td>
+                        <td class="border px-2 py-1 text-sm">ADMINISTRADOR</td>
+                        <td class="border px-2 py-1 text-sm">SIM</td>
+                        <td class="border px-2 py-1 text-center">
+                            <i class="fas fa-edit text-blue-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border px-2 py-1 text-sm">3</td>
+                        <td class="border px-2 py-1 text-sm">NIMAI.PEREZ</td>
+                        <td class="border px-2 py-1 text-sm">NIMAI PANDIT BLANCO PEREZ</td>
+                        <td class="border px-2 py-1 text-sm">000.000.000-00</td>
+                        <td class="border px-2 py-1 text-sm">CAIXA</td>
+                        <td class="border px-2 py-1 text-sm">SIM</td>
+                        <td class="border px-2 py-1 text-center">
+                            <i class="fas fa-edit text-blue-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                        <td class="border px-2 py-1 text-sm">4</td>
+                        <td class="border px-2 py-1 text-sm">RICARDO.ORSI</td>
+                        <td class="border px-2 py-1 text-sm">RICARDO AUGUSTO C. ORSI</td>
+                        <td class="border px-2 py-1 text-sm">000.000.000-00</td>
+                        <td class="border px-2 py-1 text-sm">OPERADOR</td>
+                        <td class="border px-2 py-1 text-sm">NÃO</td>
+                        <td class="border px-2 py-1 text-center">
+                            <i class="fas fa-edit text-blue-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                        <td class="border px-2 py-1 text-sm">5</td>
+                        <td class="border px-2 py-1 text-sm">VINICIUS.PARREIRA</td>
+                        <td class="border px-2 py-1 text-sm">VINICIUS CAVALCANTI PARREIRA</td>
+                        <td class="border px-2 py-1 text-sm">000.000.000-00</td>
+                        <td class="border px-2 py-1 text-sm">OPERADOR</td>
+                        <td class="border px-2 py-1 text-sm">SIM</td>
+                        <td class="border px-2 py-1 text-center">
+                            <i class="fas fa-edit text-blue-500 cursor-pointer"></i>
+                        </td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts do Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

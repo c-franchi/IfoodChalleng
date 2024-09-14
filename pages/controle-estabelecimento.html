@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estabelecimento</title>
+    <!-- Incluindo o CDN do Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Incluindo TailwindCSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/IfoodChalleng/css/controle-estabelecimento.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="/IfoodChalleng/images/_iFood logo.png" alt="Logo FoodPartner" class="h-10">
+            <nav class="flex space-x-6">
+                <a href="#" class="text-gray-700">Dashboard</a>
+                <div class="relative">
+                    <a href="#" class="text-gray-700">Gerência</a>
+                    <span class="ml-1 text-gray-500">&#9660;</span> <!-- Ícone seta para baixo -->
+                </div>
+            </nav>
+        </div>
+        <h1 class="text-2xl text-red-400">Portal de Parceiros</h1>
+        <div class="flex items-center space-x-4">
+            <!-- Ícone de perfil do usuário com Font Awesome -->
+            <i class="fas fa-user-circle text-gray-700 text-3xl"></i>
+            <span class="text-gray-700">Ricardo Parreira Nimai</span>
+        </div>
+    </header>
+    <!-- Barra de navegação secundária -->
+    <div class="bg-gray-100 py-2 px-6 flex justify-between items-center">
+        <div class="text-gray-600">Home > Gerência > Controle de Estabelecimento</div>
+        <button class="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">Novo Estabelecimento</button>
+    </div>
+
+    <!-- Conteúdo da página -->
+    <div class="container mx-auto px-4 mt-6">
+        <!-- Filtro de Estabelecimento -->
+        <div class="mb-4">
+            <label for="estabelecimento" class="block text-sm font-medium text-gray-700">Estabelecimento</label>
+            <select id="estabelecimento" class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                <option>Todos</option>
+                <!-- Adicione outras opções conforme necessário -->
+            </select>
+        </div>
+
+        <!-- Tabela de Estabelecimentos -->
+        <div class="overflow-hidden rounded-lg shadow-lg">
+            <table class="min-w-full bg-white">
+                <thead class="bg-red-500 text-white">
+                    <tr>
+                        <th class="w-1/12 px-4 py-2 text-left text-sm font-semibold">Código</th>
+                        <th class="w-2/12 px-4 py-2 text-left text-sm font-semibold">Nome Estabelecimento</th>
+                        <th class="w-2/12 px-4 py-2 text-left text-sm font-semibold">CNPJ</th>
+                        <th class="w-2/12 px-4 py-2 text-left text-sm font-semibold">Proprietário</th>
+                        <th class="w-1/12 px-4 py-2 text-left text-sm font-semibold">Ativo</th>
+                        <th class="w-1/12 px-4 py-2 text-left text-sm font-semibold">Ação</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    <tr>
+                        <td class="border-t px-4 py-2">1</td>
+                        <td class="border-t px-4 py-2">RESTAURANTE NEI CENTRO NORTE</td>
+                        <td class="border-t px-4 py-2">00.000.000/0000-00</td>
+                        <td class="border-t px-4 py-2">CLAUDINEI LUIZ FRANCHI</td>
+                        <td class="border-t px-4 py-2">SIM</td>
+                        <td class="border-t px-4 py-2">
+                            <button class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-t px-4 py-2">2</td>
+                        <td class="border-t px-4 py-2">RESTAURANTE NEI CENTRO SUL</td>
+                        <td class="border-t px-4 py-2">00.000.000/0000-00</td>
+                        <td class="border-t px-4 py-2">CLAUDINEI LUIZ FRANCHI</td>
+                        <td class="border-t px-4 py-2">SIM</td>
+                        <td class="border-t px-4 py-2">
+                            <button class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
